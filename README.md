@@ -92,6 +92,24 @@ Place downloaded data under `data/raw/`.
 
 Any change to these shapes ripples through preprocessing, training, and the backend inference pipeline — confirm with both teammates before altering.
 
+## Team Setup — One-Time Per Machine
+
+Both teammates must run this **individually** after cloning. It is not synced by `git push` — skipping it on either machine reintroduces notebook merge-conflict noise.
+
+```bash
+pip install nbstripout
+cd NeuroScanDX
+nbstripout --install
+```
+
+Verify it's active:
+```bash
+git check-attr filter -- notebooks/test.ipynb
+# Expected: notebooks/test.ipynb: filter: nbstripout
+```
+
+**What this does:** strips Jupyter notebook output/execution metadata automatically on commit, so re-running cells doesn't create false diffs or merge conflicts between teammates editing the same notebook.
+
 ## Branching Workflow
 
 - `main` is protected — no direct commits.
