@@ -224,3 +224,9 @@ data/processed/
 *.pth
 .ipynb_checkpoints/
 node_modules/
+# Ignore datasets
+data/raw/
+
+# Ignore trained model weights
+models/**/weights/*.pt
+models/**/weights/*.pth
