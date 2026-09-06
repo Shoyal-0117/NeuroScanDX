@@ -123,7 +123,7 @@ git check-attr filter -- notebooks/test.ipynb
 
 | Member | Role |
 | --- | --- |
-| Shoyal Halder | Classification model + backend |
+| Shoyal Haldar | Classification model + backend |
 | Ayaz Anwar | Segmentation model + frontend |
 
 ## Project Status
